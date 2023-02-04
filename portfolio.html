@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio/Nikhil</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+ 
+<nav>
+  <label><b>NIKHIL</b> KUSHWAHA</label>
+  
+<ul>
+<li><a href="#">ABOUT</a></li>
+<li><a href="contactform.html">CONTACT</a></li>
+<li><a href="skills.html">SKILLS</a></li>
+</ul>
+</nav>
+
+<section class="sk">
+  <br><br>
+<h1>DIGITAL WEB-DEVELOPER </h1>
+<h1>BORN IN INDIA , LIVING IN PUNJAB</h1>
+<h1>"I am the measure of my worth , and I am worthy."</h1>
+<br>
+<h1>NOW AVAILABLE TO WORK</h1>
+</section>
+
+
+<section class="sk">
+<div class="container reveal">
+<h2>MY WORK</h2>
+
+<div class="cards">
+<div class="text-card">
+<h3>PROJECTS</h3>
+<p>SOON.....</p>
+</div>
+
+
+<div class="text-card">
+<h3>...</h3>
+<p>......</p>
+</div>
+
+  <div class="text-card">
+<h3>....</h3>
+<p>.....</p>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<section>
+<div class="container reveal">
+<h2>POWERS</h2>
+
+<div class="skill">
+  <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;;">SKILLS</h4>
+  </div>
+  
+  <div class="main">
+  <div class="type">
+  <h1>HTML</h1>
+  <h1>CSS</h1>
+  <h1>EXPRESS JS</h1>
+  </div>
+  <div class="type">
+      <h1>NODE-JS</h1>
+      <h1>Mongoose</h1>
+      <h1>BootStrap</h1>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+
+    <script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+      var reveals = document.querySelectorAll('.reveal');
+
+      for(var i = 0; i < reveals.length; i++){
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+          reveals[i].classList.add('active');
+        }
+        else{
+          reveals[i].classList.remove('active');
+        }
+      }
+    }
+    </script>
+
+  </body>
+</html>
+      
+</body>
+</html>
