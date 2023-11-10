@@ -1,0 +1,29 @@
+
+<html>
+
+<head>
+    
+    <title>HOME</title>
+</head>
+
+<body>
+
+    <!-- SO BACICALLY EJS MEANING IS embadded javascript hee along with html we can also write javascript logic -->
+
+    <!-- so this home.ejs part is basically that what will be shown on our home page -->
+
+    <h3>HELLO THERE , WELCOME</h3>
+    <% if(locals.username){ %>
+        <p>
+            You are logged in as <%=username%>
+        </p>
+        
+        <a href="/logout">Logout</a>
+        <% } else { %>
+            <a href="/login">Login</a>
+
+            <% } %>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <html>
+    <head>
+        <title>Auto-Generating Chessboard</title>
+        <style>
+            /* Set the size of the squares and the border color */
+            .square {
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+                float: left; /* Display the squares inline */
+            }
+
+            /* Set the background color for the white squares */
+            .white {
+                background-color: white;
+            }
+    
+            /* Set the background color for the black squares */
+            .black {
+                background-color: black;
+            }
+    
+            /* Clear the float after each row */
+            .clearfix {
+                clear:both;
+            } 
+        </style>
+    </head>
+    <body>
+        <!-- Display a form to allow the user to input the number of rows and columns -->
+        <form id="form" target="_blank">
+            <label for="rows">Number of Rows:</label>
+            <input type="number" id="rows" value="8">
+            <br>
+            <label for="cols">Number of Columns:</label>
+            <input type="number" id="cols" value="8">
+            <br>
+            <input type="submit" value="Generate Chessboard">
+        </form>
+    
+        <div id="chessboard"></div>
+    
+        <script>
+            // Add a submit event listener to the form
+            document.getElementById("form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the form from submitting
+    
+                // Get the number of rows and columns from the form
+                var rows = document.getElementById("rows").value;
+               var cols = document.getElementById("cols").value;
+    
+                // Generate the chessboard HTML
+                var chessboardHTML = "";
+                // Loop through each row
+                for (var i = 0; i < rows; i++) {
+                    // Create a row div
+                    chessboardHTML += "<div class='clearfix'>";
+                        
+                    // Loop through each column
+                    for (var j = 0; j < cols; j++) {
+                        // Determine whether the square should be black or white
+                        var color = ((i + j) % 2 == 0) ? "white" : "black";
+    
+                        // Create a square div with the appropriate class
+                        chessboardHTML += "<div class='square " + color + "'></div>";
+                    }
+    
+                    // Close the row div
+                    chessboardHTML += "</div>";
+                }
+    
+                // Set the innerHTML of the chessboard div to the generated HTML
+                document.getElementById("chessboard").innerHTML = chessboardHTML;
+            });
+        </script>
+    </body>
+    </html>
+    

@@ -1,0 +1,28 @@
+
+<html >
+
+<head>
+    <title>Login</title>
+</head>
+
+<body>
+
+    <!-- SO BACICALLY EJS MEANING IS embadded javascript hee along with html we can also write javascript logic -->
+   
+
+    <!-- so this home.ejs part is basically that what will be shown on our home page -->
+
+    <h3>LOGIN</h3>
+    <% if(locals.error){ %>
+        <p>
+            <%= error %>
+        </p>
+        <% } %>
+            <form action="/process_login" method="post">
+                <input type="text" name='username'><br>
+                <input type="password" name='password'><br>
+                <input type="submit">
+            </form>
+</body>
+
+</html>

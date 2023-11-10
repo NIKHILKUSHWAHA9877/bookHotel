@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+     <li>OFF</li>
+     <li>OFF</li>
+     <li>OFF</li>
+     <li>OFF</li>
+     <li>OFF</li>
+     <li>OFF</li></ul>
+     <script>
+
+
+// const listItems = document.querySelectorAll('#list li')
+
+// const changeText = (click) => {
+//   return click.target.innerText = 'ON';
+//   }
+// };
+// if(listItems) {
+//   listItems.forEach(item => item.addEventListener('mouseover', changeText ));
+//   listItems.forEach(item => item.addEventListener('mouseout', changeText));
+// }
+const listItems = document.querySelectorAll('#list li');
+
+const changeText = (event) => {
+  const currentItem = event.target;
+  if (currentItem.innerText === 'OFF') {
+    currentItem.innerText = 'ON';
+  } else {
+    currentItem.innerText = 'OFF';
+  }
+};
+
+if (listItems) {
+  listItems.forEach(item => {
+    item.addEventListener('mouseover', changeText);
+    // item.addEventListener('mouseout', changeText);
+  });
+}
+
+</script>
+</body>
+</html>

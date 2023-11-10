@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="project3.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+<h1 class="title">Frequently Asked Questions</h1>
+<div class="content-coaintener">
+<div class="question">What is Return Policy?</div>
+<hr>
+<div class="Answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequatur accusantium! Quidem, labore molestias accusantium id magni eos sed ad eveniet odit illo eaque cumque beatae enim recusandae. Similique, itaque!</div>
+</div>
+
+<div class="content-coaintener">
+<div class="question">When will i receive my order?</div>
+<hr>
+<div class="Answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequatur accusantium! Quidem, labore molestias accusantium id magni eos sed ad eveniet odit illo eaque cumque beatae enim recusandae. Similique, itaque!</div>
+</div>
+
+<div class="content-coaintener">
+<div class="question">Where are you located?</div>
+<hr>
+<div class="Answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, consequatur accusantium! Quidem, labore molestias accusantium id magni eos sed ad eveniet odit illo eaque cumque beatae enim recusandae. Similique, itaque!</div>
+
+    </div>
+
+    </div>
+
+
+    <script>   
+    
+    let contentcoaintener = document.querySelectorAll('.content-coaintener') ;
+
+for( var i=0 ; i<contentcoaintener.length ; i++){ // telling the code to run n no of times using for loop
+
+contentcoaintener[i].addEventListener('click', function() {
+   this.classList.toggle('activ');
+ })
+};
+
+
+
+    
+    
+    
+    </script>
+</body>
+</html>

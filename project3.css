@@ -1,0 +1,57 @@
+body{
+    display: flex;
+     text-align: center;
+   justify-content: center;
+align-items: center; 
+/* display: block; */
+height: 100vh;
+background: url("pexels-valeriia-miller-2825749.jpg") no-repeat center center /cover;
+margin-left: 50%;
+margin-right: 50%;
+
+}
+
+.Answer{
+width: 400px ;
+margin-bottom: 30px;
+height: 0px;
+overflow: hidden;
+transition: .5s;
+}
+
+.main{
+background-color: aliceblue;
+border-radius: 10px;
+padding: 20px;
+
+}
+.title{
+
+margin-bottom: 50px;
+font-size: 30px;
+}
+.question::after {
+content: '+';
+position: absolute;
+right: 12rem;
+font-weight: bolder;
+
+}
+
+.activ .Answer{
+
+height: 100px;
+
+
+ }
+ .activ .question{
+
+font-size: 18px;
+transition: .5s;
+
+
+ }
+ .activ .question::after{
+    content: '-';
+    transition: .5s;
+ }
